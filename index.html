@@ -300,6 +300,18 @@ header.top{border-bottom:0;padding-bottom:8px}
 <div id="root" class="app">
 <div class="loading">Loading…</div><noscript>Please enable JavaScript.</noscript>
 </div>
+  <a id="dl-win" href="https://github.com/USERNAME/REPO/releases/latest/download/My-Khata-Setup.exe" download
+   style="display:none;position:fixed;left:14px;bottom:14px;z-index:9996;background:var(--accent,#111);color:var(--on-accent,#fff);padding:11px 16px;border-radius:999px;font:700 13px Inter,sans-serif;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.3)">
+  💻 Download for Windows
+</a>
+<script>
+(function(){
+  var u = navigator.userAgent;
+  var mobile = /Android|iPhone|iPad|iPod/i.test(u);
+  var inApp = /Electron/i.test(u);
+  if(!mobile && !inApp){ document.getElementById('dl-win').style.display = 'block'; }
+})();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="config.js"></script>
 <script src="cloud.js"></script>
