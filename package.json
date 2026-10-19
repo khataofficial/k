@@ -1,0 +1,38 @@
+{
+  "name": "my-khata",
+  "version": "1.0.0",
+  "description": "My Khata - udhaar, stock, rent & bills",
+  "main": "main.js",
+  "author": "Your Name",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.mykhata.app",
+    "productName": "My Khata",
+    "directories": { "output": "dist" },
+    "files": [
+      "main.js",
+      "index.html",
+      "script.js",
+      "cloud.js",
+      "config.js",
+      "manifest.json",
+      "icon.svg",
+      "icon-*.png",
+      "qr.png"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
